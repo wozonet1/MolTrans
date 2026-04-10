@@ -57,6 +57,7 @@ def test(data_generator, model):
 
         m = torch.nn.Sigmoid()
         logits = torch.squeeze(m(score))
+        print(logits)   
         loss_fct = torch.nn.BCELoss()
 
         label = Variable(torch.from_numpy(np.array(label)).float()).cuda()
